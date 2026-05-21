@@ -1,0 +1,42 @@
+{
+  "name": "polymarket-mm-bot",
+  "version": "2.0.0",
+  "description": "Market Maker Autônomo para Polymarket – Estratégia de Arbitragem de Conjunto Completo com Kelly Criterion",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "NODE_ENV=development node src/index.js",
+    "prod": "NODE_ENV=production node src/index.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop polymarket-mm-bot",
+    "pm2:restart": "pm2 restart polymarket-mm-bot",
+    "pm2:logs": "pm2 logs polymarket-mm-bot",
+    "pm2:monit": "pm2 monit",
+    "dry-run": "DRY_RUN=true npm start"
+  },
+  "dependencies": {
+    "@polymarket/clob-client-v2": "^4.10.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^5.7.2",
+    "pino": "^9.1.0"
+  },
+  "devDependencies": {
+    "pino-pretty": "^11.1.0",
+    "pm2": "^5.3.1"
+  },
+  "keywords": [
+    "polymarket",
+    "market-maker",
+    "arbitrage",
+    "kelly-criterion",
+    "crypto",
+    "prediction-market"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
